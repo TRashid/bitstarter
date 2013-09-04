@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
 
 // Render homepage (note trailing slash): example.com/
+app.get('/', function(request, response) {
 global.db.Order.findAll().success(function(orders) {
     var orders_json = [];
     orders.forEach(function(order) {
@@ -24,6 +25,7 @@ global.db.Order.findAll().success(function(orders) {
       console.log(err);
       response.send("error retrieving orders");
    });
+});
 
 // Render example.com/orders
 app.get('/orders', function(request, response) {
