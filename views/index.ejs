@@ -175,9 +175,9 @@
 	      <div class="span4">
 		<!-- linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts, illustrating media queries. -->
 		<div class="linediv-l">
-		  <% var backers = 0; var bc_sum = 0; %>
+		  <% var backers = 0; var bc_sum = 100; %>
 		  <% for(var i=0; i<orders.length; i++) {%>
-		     <% backers = backers +1 %>
+		     <% backers = backers + 1 %>
 		     <% bc_sum = bc_sum + orders[i].amount %>
 		   <% } %>
 		<h3><%= backers %></h3> <p>backers</p>
