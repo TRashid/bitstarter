@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 //	orders_json.push({id: order.coinbase_id, amount: order.amout, time: order.time});
 //      });
       // Uses views/orders.ejs
-      response.render("index", {'count': count, 'sum':sum });
+      response.render("index", {count: <database rows>, sum: <sum of amount column> });
   }).error(function(err) {
       console.log(err);
       response.send("error retrieving orders");
