@@ -14,13 +14,13 @@ app.set('port', process.env.PORT || 8080);
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
-  global.db.sequelize.query('SELECT sum(amount) from "Orders"').success(function(orders) {
+    global.db.Order.findAll().success(function(orders) {
       var orders_json = [];
       orders.forEach(function(order) {
-	orders_json.push({id: order.coinbase_id, amount: order.amout, time: order.time});
+	orders_json.push({id: order.coinbase_id, amount: order.amount, time: order.time});
       });
       // Uses views/orders.ejs
-      response.render("index", {count: orders_json.length, sum: sum });
+      response.render("index", {orders: orders_json});
   }).error(function(err) {
       console.log(err);
       response.send("error retrieving orders");
