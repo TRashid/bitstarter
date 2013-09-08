@@ -164,7 +164,7 @@
       </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-	  <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/TqeWtFX.png">
+	  <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/S2nL5I5.jpg">
 	</div>
 
 	<!-- We define a new 'actions' div to contain statistics, order, and share buttons -->
@@ -183,9 +183,9 @@
 		<h3><%= backers %></h3> <p>backers</p>
 		</div>
 	      </div>
-	      <div class="span4">
+	         <div class="span4">
 		<div class="linediv-c">
-		  <h3><%= bc_sum %></h3> <p>of $10,000</p>
+		  <h3><%= bc_sum * 126 %></h3> <p>of $10,000</p>
 		</div>
 	      </div>
 	      <div class="span4">
@@ -200,8 +200,8 @@
 	    <!-- Bootstrap progress bar -->
 	    <!-- http://twitter.github.io/bootstrap/components.html#progress -->
 	    <div class="thermometer progress active">
-	      <div class="bar bar-success" style="width: <%= (bc_sum / 250) * 100 %>%;"></div>
-	      <div class="bar bar-warning" style="width: <%= 100 - (bc_sum /250) * 100 %>%;"></div>
+	      <div class="bar bar-success" style="width: <%= ((bc_sum * 126) / 250) * 100 %>%;"></div>
+	      <div class="bar bar-warning" style="width: <%= 100 - ((bc_sum * 126) /250) * 100 %>%;"></div>
 	    </div>
 	  </div>
         </div>
@@ -236,22 +236,37 @@
      <!-- http://placehold.it -->
      <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-	  <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/kHzskIe.jpg">
+	  <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/1qJrCJr.png">
 	</div>
 	<div class="span5 copy">
 	  <p>
-          Augmynt is a project, a device, an artifact.  The product is inspired by the idea of unique yet mass manufactured personal artifiacts.  Physically unique.  Digitally unique.  Touch-Screen.  Encrypted.  Bluetooth.  The human wearable part of the internet of things.
+          You like original art.  You want original art, but you don't like going to galleries.  You are an artist.  You make orginal art, but you want a frictionless way to sell your work.  Everyone wants things to be simpler so that all that matters is getting something unique.  Simple.  Artmynt condenses everything down to one simple thing, 36 square inches.  Every painting is 6 inches by 6 inches, the essence of simplicity.  A constraint which frees the mind to concentrate on making someting truly uniuqe.
           </p>
 	</div>
       </div>
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
 	  <p> 
-            Augmynt is a digital presence device which combines timeless aesthetics, uniqueness, and wireless technology in a way that allows you to put your stamp on the world.  4,000 years ago, the <a href="http://en.wikipedia.org/wiki/Dilmun">Sumerians</a> used personal as a mark of authenticity and individuality.  But they had to carve theirs out of clay.  Augmynt will enable unique two-factor authentication, short ranges wireless digital presence, and a unique physical signature thanks to 3D printing.  The initial goal is to produce unique yet large scale manufactured artifacts with the ability to indicate unique presence over a 10-30 meter range.  
+            6 inches by 6 inches of canvas.  Put it in a box.  Artmynt will show it to the world.  Art shopper, yoe see it, share it with your friends, check the artist's reputation, buy it, it comes to your home.  Artmynt will use a social based reputation system to automatically price each work at fixed tiers.  No agony for the artist and no guesswork for the art lover.
+<p>
+Tier 1: $4/square inch
+</p>
+<p>
+Tier 2: $8/square inch
+</p>
+<p>
+Tier 3: $12/square inch
+</p>
+<h3>
+How can I get involved?
+</h3>
+<p>
+Launched as the final project for Coursera: Startup Engineering <a href="https://www.coursera.org/course/startup">Coursera: Startup Engineering</a> massive online open course (MOOC) by <a href="http://www.linkedin.com/in/tariqmrashid">Tariq Rashid</a>.  You can get involved by using the social links on this page to share it with Twitter or Facebook!  Please contribute <a href="http://bitcoin.org/en/">Bitcoin</a> if you want to see Artmynt launched as soon as possible.
+</p>
 	  </p>
 	</div>
       <div class="span5 asset">
-        <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/zQkM6Oq.jpg">
+        <img class="img-polaroid" alt="Placeholder" src="http://i.imgur.com/E0WdFbe.jpg">
       </div>
     </div>
       
@@ -318,7 +333,7 @@
   jQuery(document).ready(function($) {
       today = new Date();
 
-      BigDay = new Date("September 09, 2013");
+      BigDay = new Date("September 13, 2013");
       msPerDay = 24 * 60 * 60 * 1000 ;
       timeLeft = (BigDay.getTime() - today.getTime());
       e_daysLeft = timeLeft / msPerDay;
